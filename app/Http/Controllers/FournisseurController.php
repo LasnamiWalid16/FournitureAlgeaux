@@ -22,10 +22,7 @@ class FournisseurController extends Controller
 
 
 
-        $fournisseurs=DB::select(" select id,nom,total 
-                                from fournisseurs 
-                                where visible =1
-                                ");
+        $fournisseurs=DB::select(" select * from fournisseurs ");
 
         return view('fournisseur',compact('fournisseurs'));
     }
@@ -35,7 +32,11 @@ class FournisseurController extends Controller
     {
         $this->validate($request,[
 
-            'nom' => 'required|max:500'
+            'nom' => 'required|max:500',
+            'adresse' => 'required|max:700',
+            'forme' => 'required|max:140',
+            'registre' => 'required|max:500'
+
 
         ]);
 
@@ -55,11 +56,13 @@ class FournisseurController extends Controller
                 return redirect()->back(); 
                }
 
-        $activite=$request->input('activite');
 
       
+        $adresse=$request->input('adresse');
+        $forme=$request->input('forme');
+        $registre=$request->input('registre');
 
-        DB::insert("insert into fournisseurs (nom,activite,total) values('$nom','$activite','0') ");
+        DB::insert("insert into fournisseurs (nom,forme,registre,adresse) values('$nom','$forme','$registre','$adresse') ");
         
 
         return redirect('/fournisseurs')->with('success','Fournisseur enregistré avec succée');

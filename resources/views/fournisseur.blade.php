@@ -54,8 +54,38 @@
                               <div class="form-row">
 
                                     <div class="col-md-12 mb-6">
-                                        <label for="validationTooltip01"><B>Raison </B></label>
+                                        <label for="validationTooltip01"><B>Dénomination </B></label>
                                         <input type="text"  name="nom" class="form-control"  required>
+                                    </div>
+                                    
+                                    
+                              </div>
+
+                              <div class="form-row">
+
+                                    <div class="col-md-12 mb-6">
+                                        <label for="validationTooltip01"><B>Forme </B></label>
+                                        <input type="text"  name="forme" class="form-control"  required>
+                                    </div>
+                                    
+                                    
+                              </div>
+
+                              <div class="form-row">
+
+                                    <div class="col-md-12 mb-6">
+                                        <label for="validationTooltip01"><B>Registre </B></label>
+                                        <input type="text"  name="registre" class="form-control"  required>
+                                    </div>
+                                    
+                                    
+                              </div>
+
+                              <div class="form-row">
+
+                                    <div class="col-md-12 mb-6">
+                                        <label for="validationTooltip01"><B>Adresse </B></label>
+                                        <input type="text"  name="adresse" class="form-control"  required>
                                     </div>
                                     
                                     
@@ -84,11 +114,10 @@
             <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th scope="col"><B>Raison</B></th>
-                  <th scope="col"><B>Montant</B></th>
-                  <th scope="col"><B>Montant</B></th>
-                  <th scope="col"><B>Achats</B></th>
-                  <th scope="col"><B>Telecharger</B></th>
+                  <th scope="col"><B>Dénomination</B></th>
+                  <th scope="col"><B>Forme</B></th>
+                  <th scope="col"><B>RC</B></th>
+                  <th scope="col"><B>Adresse</B></th>
                   <th scope="col"><B>Modifier</B></th>
                   <th scope="col"><B>Supprimer</B></th>
                 </tr>
@@ -99,16 +128,11 @@
                
                 <tr>
                   <td scope="row"><B>{{$fournisseur->nom}}</B></td>
-                  <td scope="row"><B>{{$fournisseur->total}}</B></td>
-                  <td scope="row">
-                    <B><a href="MontantsFournisseur/{{$fournisseur->id}}">Montants</a></B>
-                  </td>
-                  <td scope="row">
-                    <B><a href="AchatsFournisseur/{{$fournisseur->id}}">Achats</a></B>
-                  </td>
-                  <td scope="row">
-                    <B><a href="TelechargerFournisseurCaracteristique/{{$fournisseur->id}}">Achats</a></B>
-                  </td>
+                  <td scope="row"><B>{{$fournisseur->forme}}</B></td>
+                  <td scope="row"><B>{{$fournisseur->registre}}</B></td>
+                  <td scope="row"><B>{{$fournisseur->adresse}}</B></td>
+
+                  
                   
                   <td>
                     <button type="button" class="btn-sm btn btn-primary" data-toggle="modal" data-target="#exampleModal{{$fournisseur->id}}">
@@ -131,7 +155,7 @@
                                   <div class="form-row">
 
                                     <div class="col-md-6 mb-3">
-                                      <label for="validationTooltip01"><B>NV Raison </B></label>
+                                      <label for="validationTooltip01"><B>NV Dénomination </B></label>
                                       <input type="text"  name="nom" class="form-control" value="{{$fournisseur->nom}}"  required>
                                     </div>
 
