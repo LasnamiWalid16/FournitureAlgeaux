@@ -58,9 +58,9 @@ class FournisseurController extends Controller
 
 
       
-        $adresse=$request->input('adresse');
         $forme=$request->input('forme');
         $registre=$request->input('registre');
+        $adresse=$request->input('adresse');
 
         DB::insert("insert into fournisseurs (nom,forme,registre,adresse) values('$nom','$forme','$registre','$adresse') ");
         
