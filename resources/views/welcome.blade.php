@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
                 
                     <p><B>ALGEAUX SPA</B></p>
-                    <p>ACHATS-FOURNISSEURS</p>
+                    <p>Fourniture et Transport des Equipement Hydromécaniques, Electriques, Robinetterie et Piéces Spéciales</p>
                     
                     
                 </div>
