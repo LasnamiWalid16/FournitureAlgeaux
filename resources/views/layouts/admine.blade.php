@@ -56,7 +56,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                DRHM
+                Fourniture
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -64,12 +64,17 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-school"></i>
-                                        <span>Structure</span>
+                                        <span>Fourniture</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/fournisseurs"><i class="fas fa-user-friends"></i> Fournisseurs</a>
-                        <a class="collapse-item" href="/achats"><i class="fas fa-history"></i> Achats</a>
+                        <a class="collapse-item" href="/fournisseurs">
+                            <i class="fas fa-user-friends"></i> Fournisseurs</a>
+                        <!--<a class="collapse-item" href="/achats">
+                            <i class="fas fa-history"></i> Achats</a> -->
+
+                            <a class="collapse-item" href="/produits">
+                            <i class="fas fa-history"></i> Produits</a>
                         
                     </div>
                 </div>

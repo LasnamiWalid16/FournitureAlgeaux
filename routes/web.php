@@ -54,3 +54,6 @@ Route::get('/getFournisseur',[EmpController::class,'getFournisseur']);
 Route::get('/downloadPDF',[EmpController::class,'downloadPDF']);
 
 Route::get('/TelechargerFournisseurCaracteristique/{idFournisseur}', 'FournisseurController@TelechargerFournisseurCaracteristique');
+
+
+Route::get('/produits', 'FournisseurController@produits')->name('produits');
