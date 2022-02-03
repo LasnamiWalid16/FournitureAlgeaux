@@ -13,7 +13,7 @@ class ProduitController extends Controller
     }
 
 
-    public function prduits()
+    public function produits()
     {
         $produits=DB::select(" select * from produits ");
 
